@@ -19,22 +19,21 @@ int main(int argc, char *argv[])
   char *answer[] = {
       "keshvi", "12", "1997"};
 
-
   if (strcmp(argv[1], "-q") == 0)
   {
     if (argc == 2)
     {
       printf("all questions");
     }
-    else if (strcmp(argv[2], "1")==0)
+    else if (strcmp(argv[2], "1") == 0)
     {
       printf("question 1");
     }
-    else if (strcmp(argv[2], "2")== 0)
+    else if (strcmp(argv[2], "2") == 0)
     {
       printf("question 2");
     }
-    else if (strcmp(argv[2], "3" )== 0)
+    else if (strcmp(argv[2], "3") == 0)
     {
       printf("question 3");
     }
@@ -54,29 +53,31 @@ int main(int argc, char *argv[])
     }
     else
     {
-      if (strcmp(argv[2], "1")==0 && strcmp(argv[3], answer[0]) == 0)
+      if (strcmp(argv[2], "1") == 0)
       {
-        printf("right");
+        if (strcmp(argv[3], answer[0]) == 0)
+          printf("right");
+        else
+          printf("wrong");
       }
-      else{
-        printf("wrong");
-      }
-     if (strcmp(argv[2], "2") ==0&& strcmp(argv[3], answer[1]) == 0)
+
+      else if (strcmp(argv[2], "2") == 0)
       {
-        printf("right");
+        if (strcmp(argv[3], answer[1]) == 0)
+          printf("right");
+        else
+          printf("wrong");
       }
-      else{
-        printf("wrong");
-      }
-      if (strcmp(argv[2], "3")==0 && strcmp(argv[3], answer[2]) == 0)
+      else if (strcmp(argv[2], "3") == 0)
       {
-        printf("right");
+        if (strcmp(argv[3], answer[2]) == 0)
+          printf("right");
+        else
+          printf("wrong");
       }
-      else{
-        printf("wrong");
-      }
-    }}
-// HELP
+    }
+  }
+  // HELP
   else if (strcmp(argv[1], "--help") == 0)
   {
     printf("help instructions");
